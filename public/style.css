@@ -2,22 +2,22 @@ body {
     font-family: sans-serif;
 }
 
-.tree .tree-item {
+.tree > .tree-item {
     display: block;
     padding: 5px;
     padding-left: 20px;
     background: rgba(0, 0, 0, .1);
 }
 
-.tree .tree-item > .name {
+.tree > .tree-item > .name {
     padding: 5px;
 }
 
-.tree .tree-item.expandable > .name {
+.tree > .tree-item.expandable > .name {
     cursor: pointer;
 }
 
-.tree .tree-item.expandable > .name:before {
+.tree > .tree-item.expandable > .name:before {
     float: left;
     display: block;
     height: 0;
@@ -26,13 +26,13 @@ body {
     margin-right: 10px;
 }
 
-.tree .tree-item.expandable:not(.active) > .name:before {
+.tree > .tree-item.expandable:not(.active) > .name:before {
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
     border-left: 5px solid #000;
 }
 
-.tree .tree-item.expandable.active > .name:before {
+.tree > .tree-item.expandable.active > .name:before {
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 5px solid #000;

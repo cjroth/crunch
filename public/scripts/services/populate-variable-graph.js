@@ -1,6 +1,28 @@
 angular
     .module('crunch')
     .factory('populateVariableGraph', () => {
+        // This is a recursive function that takes a list of variables and a
+        // order (node) for the variables. An order is a tree-like stucture
+        // describing how the variables are arranged into categories and
+        // subcategories.
+        //
+        // The variables argument should be an object in the format specifid in
+        // `fixtures/order.json` and the output will be an object in the format:
+        // [
+        //   {
+        //     type: "tree",
+        //     name: "Awareness Metrics"
+        //     children: [
+        //       {
+        //         type: "tree",
+        //         name: "Taxis"
+        //         children: [
+        //           // ...
+        //         ]
+        //       }
+        //     ]
+        //   }
+        // ]
         return populateVariableGraph = (variables, node) => {
             return node.map(item => {
                 // item is either:

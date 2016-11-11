@@ -1,12 +1,11 @@
 angular
     .module('crunch')
     .controller('main', ($scope, store, populateVariableGraph) => {
-        let datasetId = '349d49'
         store
-            .getVariableListWithOrder(datasetId, 'hier')
+            .getVariableListWithOrder('349d49', 'hier')
             .then((variableList) => {
-                window.v = variableList
                 $scope.graph = populateVariableGraph(variableList.index, variableList.order.graph)
+                console.log($scope.graph)
                 $scope.$apply()
             })
     })
