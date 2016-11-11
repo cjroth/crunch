@@ -29,8 +29,8 @@ angular
                 // 1. '7a89e0'
                 // or
                 // 2. {
-        		//	"Coffee": ["786c0f", "2d27ab"]
-        		// }
+                //	"Coffee": ["786c0f", "2d27ab"]
+                // }
                 if (typeof item === 'string') {
                     return variables[item]
                 } else {
