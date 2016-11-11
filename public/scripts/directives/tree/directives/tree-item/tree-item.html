@@ -1,0 +1,4 @@
+<div class="tree-item" ng-class="{ active: state.active, expandable: item.type === 'tree' }">
+    <div class="name" ng-bind="item.name" ng-click="state.active = !state.active" title="{{item.description}}"></div>
+    <tree ng-if="item.type === 'tree' && state.active" graph="item.children"></tree>
+</div>
